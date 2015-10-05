@@ -10,10 +10,23 @@
 
 * [docker-uchiwa](http://github.com/roobert/docker-uchiwa)
 
+## Pre-Build
+
+Populate dependencies.sh with any required dependencies, e.g:
+```
+#!/usr/bin/env bash
+
+/opt/sensu/embedded/bin/gem install redis influxdb
+```
+
 ## Build
 ```
 docker build -t sensu-server .
 ```
+
+## Configure
+
+Add configuration files to directories in `data/`.
 
 ## Run
 ```

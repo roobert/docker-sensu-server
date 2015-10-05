@@ -11,7 +11,7 @@ ENV SENSU_GEMS_VERSION=2.0.0
 
 # use embedded ruby..
 ENV PATH /opt/sensu/embedded/bin:/sensu/plugins:/sensu/handlers:/sbin:/usr/sbin:/bin:/usr/bin
-ENV GEM_PATH /opt/sensu/embedded/lib/ruby/gems/${SENSU_GEMS_VERSION}:$GEM_PATH
+ENV GEM_PATH /opt/sensu/embedded/lib/ruby/gems/${SENSU_GEMS_VERSION}
 
 # can be used to do things like install dependencies for sensu handlers/plugins
 ADD dependencies.sh /tmp/
