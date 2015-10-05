@@ -1,5 +1,14 @@
 # docker-sensu-server
 
+## TODO
+
+* RabbitMQ SSL
+* `nginx`
+* HA
+  * keepalived
+  * haproxy
+  * redis-sentinel
+
 ## Pre-Requisites
 
 * [docker-redis](http://github.com/roobert/docker-redis)
