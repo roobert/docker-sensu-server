@@ -1,0 +1,15 @@
+sensu-server:
+  build: .
+  container_name: sensu-server
+  restart: always
+  image: sensu-server
+  external_links:
+    - redis
+    - rabbitmq
+  environment:
+    - TRANSPORT_NAME=rabbitmq
+    - RABBITMQ_URL=amqp://rabbitmq:5672
+    - REDIS_URL=redis://redis:6379
+    - SENSU_SERVICE=server
+  volumes:
+    - ./data:/sensu
