@@ -19,7 +19,7 @@
 
 * [docker-uchiwa](http://github.com/roobert/docker-uchiwa)
 
-## Pre-Build
+## Configure
 
 Populate dependencies.sh with any required dependencies, e.g:
 ```
@@ -28,14 +28,12 @@ Populate dependencies.sh with any required dependencies, e.g:
 /opt/sensu/embedded/bin/gem install redis influxdb
 ```
 
+Add configuration files to directories in `data/`.
+
 ## Build
 ```
 docker build -t sensu-server .
 ```
-
-## Configure
-
-Add configuration files to directories in `data/`.
 
 ## Run
 ```
@@ -47,8 +45,6 @@ docker run \
   -e TRANSPORT_NAME=rabbitmq \
   -e RABBITMQ_URL=amqp://rabbitmq:5672 \
   -e REDIS_URL=redis://redis:6379 \
-  -e SENSU_SERVICE=server \
-  -v ./data:/sensu \
   sensu
 ```
 

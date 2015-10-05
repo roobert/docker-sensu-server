@@ -11,5 +11,3 @@ sensu-server:
     - RABBITMQ_URL=amqp://rabbitmq:5672
     - REDIS_URL=redis://redis:6379
     - SENSU_SERVICE=server
-  volumes:
-    - ./data:/sensu
