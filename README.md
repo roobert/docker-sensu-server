@@ -21,7 +21,7 @@
 
 ## Configure
 
-Populate dependencies.sh with any required dependencies, e.g:
+Populate `dependencies.sh` with any required dependencies, e.g:
 ```
 #!/usr/bin/env bash
 
